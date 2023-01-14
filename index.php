@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }  
 
 // Conecta a la base de datos  con usuario, contraseña y nombre de la BD
-$servidor = "localhost"; $usuario = "root"; $contraseña = ""; $nombreBaseDatos = "empleados";
+$servidor = "containers-us-west-164.railway.app"; $usuario = "root"; $contraseña = "F8hB84IjvoiUG7NAlEDp"; $nombreBaseDatos = "railway";
 $conexionBD = new mysqli($servidor, $usuario, $contraseña, $nombreBaseDatos);
 
 
