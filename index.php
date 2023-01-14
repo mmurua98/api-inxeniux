@@ -1,20 +1,11 @@
 <?php
 
 
-if (isset($_SERVER['HTTP_ORIGIN'])) {  
-    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");  
-    header('Access-Control-Allow-Credentials: true');  
-    header('Access-Control-Max-Age: 86400');   
-}  
-  
-if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {  
-  
-    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))  
-        header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");  
-  
-    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))  
-        header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");  
-}  
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: access");
+header("Access-Control-Allow-Methods: GET,POST");
+header("Content-Type: application/json; charset=UTF-8");
+header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // Conecta a la base de datos  con usuario, contraseña y nombre de la BD
 $servidor = "containers-us-west-164.railway.app:7240"; $usuario = "root";  $contraseña = "F8hB84IjvoiUG7NAlEDp"; $nombreBaseDatos = "railway";
