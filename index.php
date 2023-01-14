@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 }  
 
 // Conecta a la base de datos  con usuario, contraseña y nombre de la BD
-$servidor = "containers-us-west-164.railway.app"; $usuario = "root"; $contraseña = "F8hB84IjvoiUG7NAlEDp"; $nombreBaseDatos = "railway";
-$conexionBD = new mysqli($servidor, $usuario, $contraseña, $nombreBaseDatos);
+$servidor = "containers-us-west-164.railway.app"; $usuario = "root"; $port = "7240"; $contraseña = "F8hB84IjvoiUG7NAlEDp"; $nombreBaseDatos = "railway";
+$conexionBD = new mysqli($servidor, $port, $usuario, $contraseña, $nombreBaseDatos);
 
 
 // Consulta datos y recepciona una clave para consultar dichos datos con dicha clave
