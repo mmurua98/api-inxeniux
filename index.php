@@ -7,6 +7,7 @@ header("Access-Control-Allow-Methods: GET,POST");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
+
 // Conecta a la base de datos  con usuario, contraseña y nombre de la BD
 $servidor = "localhost"; $usuario = "root";  $contraseña = ""; $nombreBaseDatos = "api-inxeniux";
 $conexionBD = new mysqli($servidor, $usuario, $contraseña, $nombreBaseDatos);
@@ -35,7 +36,7 @@ if (isset($_GET["borrar"])){
     }
     else{  echo json_encode(["success"=>0]); }
 }
-//Inserta un nuevo registro y recepciona en método post los datos de nombre y correo
+//Inserta un nuevo registro y recepciona en método post los datos
 if(isset($_GET["insertar"])){
     $data = json_decode(file_get_contents("php://input"));
     $nombre=$data->nombre;
@@ -66,7 +67,7 @@ if(isset($_GET["insertar"])){
     exit();
     
 }
-// Actualiza datos pero recepciona datos de nombre, correo y una clave para realizar la actualización
+// Actualiza dato. Primero recepciona los datos para para realizar la actualización
 if(isset($_GET["actualizar"])){
     
     $data = json_decode(file_get_contents("php://input"));
