@@ -7,7 +7,7 @@ header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 // Conecta a la base de datos  con usuario, contraseña y nombre de la BD
-$servidor = "containers-us-west-164.railway.app:7240"; $usuario = "root";  $contraseña = "F8hB84IjvoiUG7NAlEDp"; $nombreBaseDatos = "railway";
+$servidor = "containers-us-west-164.railway.app:7240"; $usuario = "root";  $contraseña = "f79CQ3s3x5HVEhIE2pRG"; $nombreBaseDatos = "railway";
 $conexionBD = new mysqli($servidor, $usuario, $contraseña, $nombreBaseDatos);
 
 // Consulta datos y recepciona una clave para consultar dichos datos con dicha clave
